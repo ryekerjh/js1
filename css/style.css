@@ -1,0 +1,183 @@
+/* UNIVERSALS */
+body, html {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+html {
+    background-color: #F7D109;
+}
+
+main, aside {
+    font-size: 1.5em;
+}
+
+a {
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e40007;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #e40007;
+}
+
+ul {
+    list-style: none;
+}
+
+.bulleted-points {
+    list-style-type: circle;
+}
+
+.dashed-list {
+    list-style-type: square;    
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+pre {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+code {
+    float: left;
+}
+
+.highlight-circle {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #e40007;
+    animation: fade-in infinite 3s;
+    padding-left: 4px;
+}
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+}
+
+.logo {
+    background-color: #e40007;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    animation: color-swirl 2s ease-in-out;
+}
+
+.logo a {
+    font-size: 2em; 
+    color: #fff;    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.nav {
+    font-weight: bold;
+}
+
+.open .dropdown-menu {
+    position: fixed;
+    right: 9px;
+    top: 50px;
+    left: 86%;
+}
+
+/* MAIN STYLES */
+.section main, .section aside{
+    margin-top: 2em;
+}
+
+aside {
+    color: #e40007;
+    text-align: center;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+.outline ul li:first-child {
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.section aside {
+    animation: from-top 3s ease-in-out;
+}
+
+.section main {
+    animation: from-right 3s ease-in-out;
+}
+
+.title {
+    animation: fade-in 4s ease-in-out;
+}
+
+/* ANIMATIONS */
+@keyframes from-top {
+    from {
+        opacity: 0;
+        position: relative;
+        top: -200px;
+        color: #eee;
+    }
+
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+@keyframes from-right {
+    from {
+        opacity: .5;
+        right: -2000px;
+    }
+
+    to {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes color-swirl {
+    from {
+        background-color: #F7D109;
+        transform: rotate(0deg);
+    }
+    to {
+        background-color: #e40007;
+        transform: rotate(360deg);
+    }
+}
