@@ -25,6 +25,17 @@ var sticky = {
     }
   };
 
+  function findTruth() {
+    var theTruth = {
+        "Luke Skywalker" : "Best Jedi Evar",
+        "Star Trek is the best" : false,
+        "Answer to meaning of life" : 42,
+        "Best things in Life" : ['Star Wars', 'cheese', 'learning']
+    };
+        alert("Check your console");
+        console.log(theTruth);
+  }
+
 //   switch(document.getElementById('day')) {
 
 //   }
