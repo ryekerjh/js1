@@ -82,6 +82,15 @@ code {
     animation: fade-in .4s ease-in;
 }
 
+.js-link {
+    font-weight: bold
+}
+
+.js-link:hover {
+    cursor: pointer;
+    color: #e40007;
+}
+
 /* HEADER */
 header {
     display: flex;
@@ -110,6 +119,11 @@ header {
 
 .nav {
     font-weight: bold;
+}
+
+.navbar-default {
+    background-color: #eee;
+    border: none;
 }
 
 .open .dropdown-menu {

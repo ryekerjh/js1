@@ -17,7 +17,6 @@ var sticky = {
       else {
         this.header.classList.add("header-relative");        
         this.header.classList.remove("header-fixed");
-        console.log('high');
       }
     },
   
@@ -25,5 +24,9 @@ var sticky = {
       window.addEventListener("scroll", this.scroll.bind(this));
     }
   };
+
+//   switch(document.getElementById('day')) {
+
+//   }
   
   document.addEventListener("DOMContentLoaded", sticky.init.bind(sticky));
