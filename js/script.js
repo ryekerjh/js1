@@ -35,9 +35,5 @@ var sticky = {
         alert("Check your console");
         console.log(theTruth);
   }
-
-//   switch(document.getElementById('day')) {
-
-//   }
   
   document.addEventListener("DOMContentLoaded", sticky.init.bind(sticky));
