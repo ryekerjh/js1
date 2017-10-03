@@ -23,8 +23,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                
                 <ul class="nav nav-pills navbar-nav pull-right">
-                    <li role="presentation"><a href="resources.html">Resources</a></li>
-                    <li role="presentation"><a href="outline.html">Week By Week Outline</a></li>
+                    <!-- <li role="presentation"><a href="resources.html">Resources</a></li>
+                    <li role="presentation"><a href="outline.html">Week By Week Outline</a></li> -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Days <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -33,12 +33,12 @@
                             <li role="presentation"><a href="three.html">dayThree</a></li>
                             <li role="presentation"><a href="four.html">dayFour</a></li>
                             <li role="presentation"><a href="five.html">dayFive</a></li>
-                            <li role="presentation"><a href="six.html">daySix</a></li>
+                            <!-- <li role="presentation"><a href="six.html">daySix</a></li>
                             <li role="presentation"><a href="seven.html">daySeven</a></li>
                             <li role="presentation"><a href="eight.html">dayEight</a></li>
                             <li role="presentation"><a href="nine.html">dayNine</a></li>
                             <li role="presentation"><a href="ten.html">dayTen</a></li>
-                            <li role="presentation"><a href="eleven.html">dayEleven</a></li>
+                            <li role="presentation"><a href="eleven.html">dayEleven</a></li> -->
                             <li role="presentation"><a href="final.html">finalProject</a></li>
                         </ul>
                     </li>
@@ -46,8 +46,129 @@
             </div>
         </nav>
     </header>
-
-
+    <div class="container-fluid">
+    <div class="row section">
+        <aside class="col-sm-3">
+            <h2>Review Take Home</h2>
+        </aside>
+        <main class="col-sm-9">
+            <ol class="points">
+                <li>How do we even do it?</li>
+                <li>What was your result?</li> 
+            </ol>
+            <p>From now on, we will be using our Atom code editor.</p>
+        </main>
+    </div>
+    <div class="row section">
+        <aside class="col-sm-3">
+            <h2>Functions</h2>
+        </aside>
+        <main class="col-sm-9">
+            <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Function">Functions</a></p>
+            <ul>
+                <li>Anonymous vs. named</li>
+                <li>Requirements:
+                    <ul>
+                        <li> The function keyword followed by...</li>
+                        <li>The name of the function</li>
+                        <li>A list of arguments to the functions enclosed in parentheses and separated by commas</li>
+                        <li>The statements that define the functions enclosed in curly brackets</li>
+                    </ul>
+                </li>
+                <li>Let's try it together...</li>
+                <li>Now let's play with some basic JavaScript predefined 'methods'</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">.toUpperCase()</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">.toLowerCase()</a></li>
+            </ul>
+        </main>
+    </div>
+    <div class="row section">
+        <aside class="col-sm-3">
+            <h2>Try it out!</h2>
+        </aside>
+        <main class="col-sm-9">
+            <p>In JSFiddle, write a function that:</p>
+            <ul>
+                <li>Prompts a user for a string</li>
+                <li>Converts that string to uppercase</li>
+                <li>Alerts the user the uppercase string</li>
+                <li>Logs the current date and time to the console.</li>
+            </ul>
+        </main>
+    </div>
+    <div class="row section">
+        <aside class="col-sm-3">
+            <h2>Functions, cont.</h2>
+        </aside>
+        <main class="col-sm-9">
+            <p>Custom Functions</p>
+            <ul>
+                <li>Let's write a function that <em>does</em> something.</li>
+                <li>Take a string
+                <li>Using some of the methods we have already learned:
+                    <ul>
+                        <li>Capitalize all the words in the string</li>
+                        <li>***Check for edge cases***</li>
+                        <li>Alerts the user with the fixed string</li>
+                        <li>What you'll need:
+                            <ul>
+                                <li>string.slice()</li>
+                                <li>string.toUpperCase()</li>
+                                <li>concatenation ('string '+ 'other string')</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <div class="row section">
+        <aside class="col-sm-3">
+            <h2>Method vs. Function</h2>
+        </aside>
+        <main class="col-sm-9">
+            <p>There is a basic, but important difference</p>
+            <ul>
+                <li>A <b>function</b> is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.</li>
+                <li>A <b>method</b> is a piece of code that is called by a name that is associated with an object. In most respects it is identical to a function except for two key differences:
+                    <ol>
+                        <li>A method is implicitly passed the object on which it was called.</li>
+                        <li>A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).</li> 
+                    </ol>
+                </li>
+            </ul>
+            <p>We will cover this more in-depth in a future class, but for now, remember the difference.</p>
+        </main>
+    </div>
+    <div class="row section">
+        <aside class="col-sm-3">
+            <h2>Take Home</h2>
+        </aside>
+        <main class="col-sm-9">
+            <p>In either a new repository or on a new branch, write a program that uses functions to:</p>
+            <ol class="points">
+                <li>Take a number and return the square of that number (power of 2).</li>
+                <li>If a non-number argument is passed into the function, alert NaN and prompt for another response</li>
+                <li>In a second function, capitalize the first letter of a string and add a period (.) to the end of the string if it doesn't already end with a period</li> 
+                <li>Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. <small> Hint: use substring.</small></li>
+                <li>BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.</li>
+            </ol>
+        </main>
+    </div> 
+    <!-- takehome 
+    ·         
+    ·         
+    ·         .
+    ·         
+    ·         
+    ·         If a non-string argument is passed into the function, return a blank string
+    ·         If a string with less than 2 characters or an odd number of characters is passed into this function, return a blank string. Hint: use modulus (%) operator.
+    ·         Bonus: how can this function be modified to work with odd-length strings, such as converting “abc1efg” to “efg1abc”?
+    ·         Create a function that accepts an array of 4 numbers and returns the average
+    ·         If a non-array is passed into the function, return NaN. Remember arrays are considered objects in JS.
+    ·         If any of the 4 values in the array are not a number, return NaN.
+    takehome -->
+</div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
