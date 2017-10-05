@@ -68,6 +68,9 @@ code {
     padding-left: 4px;
 }
 
+.container, .container-fluid {
+    margin-bottom: 60px;
+}
 /* JS HELPERS */
 .header-fixed {
     position: fixed;
