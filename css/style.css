@@ -77,7 +77,7 @@ code {
     top: 0;
     left: 0;
     right: 0;
-    animation: roll-down .5s ease-in;
+    animation: roll-down .2s ease-in;
     z-index: 10;
 }
 
@@ -157,15 +157,15 @@ aside h2 {
 }
 
 .section aside {
-    animation: from-top 3s ease-in-out;
+    animation: from-top 1.5s ease-in-out;
 }
 
 .section main {
-    animation: from-right 3s ease-in-out;
+    animation: from-right 1.5s ease-in-out;
 }
 
 .title {
-    animation: fade-in 4s ease-in-out;
+    animation: fade-in 2s ease-in-out;
 }
 
 /* TAKE HOME */
