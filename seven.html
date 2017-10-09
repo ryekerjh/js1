@@ -23,8 +23,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                
                 <ul class="nav nav-pills navbar-nav pull-right">
-                    <li role="presentation"><a href="resources.html">Resources</a></li>
-                    <li role="presentation"><a href="outline.html">Week By Week Outline</a></li>
+                    <!-- <li role="presentation"><a href="resources.html">Resources</a></li>
+                    <li role="presentation"><a href="outline.html">Week By Week Outline</a></li> -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Days <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -36,9 +36,9 @@
                             <li role="presentation"><a href="six.html">daySix</a></li>
                             <li role="presentation"><a href="seven.html">daySeven</a></li>
                             <li role="presentation"><a href="eight.html">dayEight</a></li>
-                            <li role="presentation"><a href="nine.html">dayNine</a></li>
+                            <!-- <li role="presentation"><a href="nine.html">dayNine</a></li>
                             <li role="presentation"><a href="ten.html">dayTen</a></li>
-                            <li role="presentation"><a href="eleven.html">dayEleven</a></li>
+                            <li role="presentation"><a href="eleven.html">dayEleven</a></li> -->
                             <li role="presentation"><a href="final.html">finalProject</a></li>
                         </ul>
                     </li>
@@ -46,7 +46,178 @@
             </div>
         </nav>
     </header>
+    <div class="container-fluid">
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>Review Take Home</h2>
+            </aside>
+            <main class="col-sm-9">
+                <ol class="points">
+                    <li>How far did you get?</li>
+                    <li>What challenges did you face?</li> 
+                </ol>
+            </main>
+        </div>
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>More DOM Manipulation</h2>
+            </aside>
+            <main class="col-sm-9">
+                <p>There's more we can do with the DOM, and it only gets more fun!</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">.textContent</a>
+                        <ul>
+                            <li>Returns any text inside of the element (except comments) including child element contents.</li>
+                            <li>Advantage over innerHTML because the browser doesn't have to parse the HTML.</li>
+                            <li>Can set text as well</li>
+                        </ul>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a>
+                        <ul>
+                            <li>This returns all contents of the element (including comments) and has to parse the HTML.</li>
+                            <li>Also sets text, but can add HTML.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </main>
+        </div>
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>Creating Elements (from thin air!)</h2>
+            </aside>
+            <main class="col-sm-9">
+                <p>Up to this point, we've been manipulating things that are already present on the DOM. Let's create some.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">.createElement()</a>
+                        <ul>
+                            <li>Allows you to generate any valid HTML tag.</li>
+                            <li>You can optionally pass a second argument to this method to give it content, but there is a better way that we will cover next.</li>
+                        </ul>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">.appendChild()</a>
+                        <ul>
+                            <li>Adds a node to the end of a parent node's list of children.</li>
+                            <li>Be careful about chaining methods, you may get an unexpected result.</li>
+                        </ul>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">.append()</a>
+                        <ul>
+                            <li>Appends a list of child nodes to a parent node.</li>
+                            <li>This is experimental, but it works in several browsers. Be aware that it could change.</li>
+                        </ul>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore">.insertBefore()</a>
+                        <ul>
+                            <li>Out of order insertion!</li>                                
+                            <li>Takes two arguments: the new node you're inserting, and the child node that you're inserting before.</li>
+                            <li>Must be referenced using a parent node to start with.</li>
+                        </ul>
+                    </li>
+                    <li>Adding attributes to any element.
+                        <p>Just use dot notation!</p>
+                        <ul>
+                            <li>.id
+                                <ul>
+                                    <li>
+                                        <pre style="width:50%"><code style="text-align: left">
+    var myPTag = document.createElement("p");
+    myPTag.id = 'paragraphId';
+    myPTag.innerHTML = 'This is my <strong>amazing</strong> paragraph';
+    
+    parent.appendChild(myPTag);                                            
+                                        </code></pre>
+                                    </li>
+                                </ul>
+                            </li>                           
+                            <li>.className 
+                                <ul>
+                                    <li>
+                                        <pre style="width:50%"><code style="text-align: left">
+        var h1 = document.createElement('h1');
+        h1.className = 'headingClass';
+        h1.textContent = 'The headline to an article';
+        
+        parent.appendChild(h1);    
+                                        </code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">.classList</a> 
+                                    <ul>
+                                        <li>
+                                            <pre style="width:50%"><code style="text-align: left">
+            var h1 = document.getElementsByTagName('h1')[0];  
+            var bool = true;                                                  
+            
+            //Add a class to an element
+            h1.classList.add('pull-left');
 
+            //Remove a class from an element
+            h1.classList.remove('pull-left');
+
+            //Toggle a class on an element
+            h1.classList.toggle('pull-right', [**optional**]bool);
+
+            //Replace one class with another, kind of like toggle
+            h1.classList.replace('pull-left', 'pull-right');
+
+            //Check if a class exists on an element
+            h1.classList.contains('pull-left');
+                                            </code></pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">.setAttribute()</a> 
+                                    <ul>
+                                        <li>
+                                            <pre style="width:50%"><code style="text-align: left">
+            var image = document.getElementsByTagName('img')[0];  
+            
+            //Check what the attributes are on the img element
+            image.getAttribute('alt');
+
+            //Remove an attribute from an element
+            //only works with inline attributes on the element itself
+            image.removeAttribute('class');
+
+            //Set an attribute on an element
+            //Caveat: if you're dealing with boolean values, you can just set the attribute itself, and no value.
+            image.setAttrbute('alt', 'Our Logo');
+
+                                            </code></pre>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Let's try it out. Clone <a href="https://github.com/ryekerjh/js1-DOM-practice" target="_blank">this <i class="fa fa-external-link" aria-hidden="true"></i></a> repository. Open it in Atom and create <a href="img/basicHTMLExample.png" target="_blank">this</a> basic HTML page, using <em>only</em> the methods you've learned. <b>HINT:</b> Know that the head tag itself can be very finniky, so create that statically (in HTML) and make the rest dynamically (with JS). Use Bootstrap helper classes to shorten your workload.</p>
+            </main>
+        </div>
+        <div class="row section">
+                <aside class="col-sm-3">
+                    <h2>FizzBuzz Test</h2>
+                </aside>
+                <main class="col-sm-9">
+                    <p>Alright, let's put all this stuff we've learned together:</p>
+                    <ul>
+                        <li><p class="text-justify">Write a program that prints on the page all numbers from 1 to 100. For multiples of three print “Fizz” instead of the number. For multiples of five print “Buzz” instead of the number. For numbers which are multiples of both three and five print “FizzBuzz”.</p></li>
+                            <ul>
+                                <p>What you'll need:</p>
+                                <li>For loop</li>
+                                <li>Modulo/modulus/modsy-whatsit</li>
+                                <li>console.log()</li>
+                                <li>createElement()</li>
+                                <li>appendChild()</li>
+                                <li>.innerText</li>
+                                <li>if statements or switch statements(lots of ways to do the same thing!)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </main>
+            </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>

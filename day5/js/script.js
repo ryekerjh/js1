@@ -66,9 +66,8 @@ function addStar(string) {
    for(i = 0; i < words.length; i++) {
      let firstLetter = words[i].split('')[0];
      let restOfWord = words[i].substring(1);
-     console.log(newString, firstLetter, restOfWord);
      firstLetter = firstLetter.toUpperCase();
-    newString.push(firstLetter + restOfWord);
+     newString.push(firstLetter + restOfWord);
    };
    alertText(newString.join(' '));
  };
@@ -77,8 +76,17 @@ function addStar(string) {
   prompt(stringToAlert);
  };
  
- capitalize('things and stuff');
- 
+ // capitalize(prompt('LeT Me HElp yOU CapItaLiZe'));
+
+function checkPalindrome(string) {
+  var original = string.toString();
+  var reversed = string.reverse().toString();
+  if(original === reversed) {
+    return true;
+  } else {
+    return false;
+  }
+};
  
  
  

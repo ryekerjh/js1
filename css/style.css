@@ -69,7 +69,7 @@ code {
 }
 
 .container, .container-fluid {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 /* JS HELPERS */
 .header-fixed {
