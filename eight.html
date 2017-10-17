@@ -118,6 +118,7 @@
             <main class="col-sm-9">
                 <ul class="points">
                     <li>What's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">"this"</a>?</li>
+                    <li>First, you have to comprehend the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Call_stack">call stack.</a></li>
                     <li>Global Context:
                         <ul>
                             <li>Console.log(this) in the scripts.js file.</li>
@@ -142,6 +143,27 @@
                                     <li>Now, call checkScope in the global context, and then log out obj.a : Don't worry, we'll learn about object next class!</li>
                                 </ol>
                             </li>
+                            <li>Four ways to bind <em>this</em>:
+                                <ol>
+                                <li>Use new (more on that next class)</li>
+                                <li>Explicit binding using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">.call()</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">.apply()</a>.</li>
+                                <li>Implicit binding by calling the function with a <em>context</em>;
+                                <pre><code>
+        function logThis() {
+            console.log( this );
+        }
+        
+        var implicitBindingObject = {
+            answerToLife: 42,
+            logThis: logThis //notice that foo is called/referenced here, thus changing the calling context.
+        };
+        
+        implicitBindingObject.logThis(); //Result will be the contents of the implicitBindingObject.
+                                </code></pre>
+                                </li>
+                                <li>Otherwise, default binding refers to the global context a.k.a. Window.</li>
+                            </ol>
+                            </li>
                         </ul>   
                     </li> 
                     <li>Inline Context
@@ -150,7 +172,7 @@
                             <li>Let's create a button with a click attribute that alerts this to see what we're talking about.</li>
                         </ul>
                     </li>
-                    <li>Make sense? Yeah, I didn't think so...</li>                                                
+                    <li>Make sense? Yeah, I didn't think so...</li>     
                     <li>I highly recommend <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md">You Don't Know JS</a>, which is available for free on GitHub.</li>                    
                 </ul>
             </main>
