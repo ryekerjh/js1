@@ -138,13 +138,13 @@
     var v = 1;
     var getValue = (function(x) {
         return function() { 
-            return x; 
+            alert(x); 
         };
     }(v));
     v = 2;
     
     getValue(); 
-    //What do you expect the value that is returned to be? copy this code and run it to see...
+    //What do you expect the value that is alerted to be? copy this code and run it to see...
                         </code></pre>
                     </li>
                     <li>This is the scope binding I mentioned earlier. The main usefulness of this comes in frameworks, but they are useful when you want to constrain the scope of something.</li>
