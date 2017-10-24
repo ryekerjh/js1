@@ -24,7 +24,7 @@
     if(newTodoText) {
       var todoList = document.getElementById('todo-list');
       listItem = document.createElement('LI');
-      listItem.setAttribute('id', Math.random());            
+      listItem.setAttribute('id', i++);            
       var para = document.createElement('p');
       para.setAttribute('class', listItem.id);      
       para.appendChild(document.createTextNode(newTodoText));
@@ -62,8 +62,8 @@
     var saveBtn = document.createElement('BUTTON');
     saveBtn.classList.add("save-btn", "btn", "btn-info", "hide");
     saveBtn.innerHTML = 'Update Todo';
-    saveBtn.addEventListener("click", updateTask, false);
-    listItem.appendChild(saveBtn);            
+    saveBtn.addEventListener("click", updateTask);
+    listItem.appendChild(saveBtn);        
   }
   //TODO: Need to figure out how to grab edit btns dynamically
   if(document.getElementById('edit-btn')) {
@@ -73,14 +73,16 @@
     });
   };
 
-  var initializeRemovals = function() {
-    allDeleteButtons = wrapper.getElementsByClassName("delete-btn");    
-    for (let i = 0; i < allDeleteButtons.length; i++) {
-      allDeleteButtons[i].addEventListener("click", removeTask, false);
-    };
-  };
+  // var initializeRemovals = function() {
+  //   cons
+  //   allDeleteButtons = wrapper.getElementsByClassName("delete-btn");    
+  //   for (let i = 0; i < allDeleteButtons.length; i++) {
+  //     allDeleteButtons[i].addEventListener("click", removeTask, false);
+  //   };
+  // };
 
   var initializeEdits = function() {
+    console.log("initialize edits was fired");
     allEditButtons = wrapper.getElementsByClassName("edit-btn");    
     for (let i = 0; i < allEditButtons.length; i++) {
       allEditButtons[i].addEventListener("click", editTasks, false);
@@ -89,10 +91,11 @@
 
   var removeTask = function() {
     // initializeRemovals();    
-    console.log('yep');
     var deleteTask = this.parentNode,
-    confirmRemoval = confirm("Are you sure?");    
-    deleteTask.outerHTML = "";
+    confirmRemoval = confirm("Are you sure?");  
+    if(confirmRemoval) {  
+      deleteTask.outerHTML = "";
+    }
 };
 
 var editTasks = function() {
@@ -110,21 +113,23 @@ var editTasks = function() {
     var editInput = document.createElement('input');
     var contents = para["innerText" in para ? "innerText" : "textContent"];
     editInput.value = contents;    
+    editInput.className = "update-input";
     listItem.appendChild(editInput);	
   }
     listItem.classList.toggle("editMode");
 };
 
+var updateTask = function() {
+  console.log('fired');
+  var newInputContent = document.getElementsByClassName("update-input")[0].value;
+  console.log(newInputContent, 'new content');
+};
+
 var grabBtns = function() {
   allEditButtons = wrapper.getElementsByClassName("edit-btn");
   allDeleteButtons = wrapper.getElementsByClassName("delete-btn");
-  console.log(allEditButtons, allDeleteButtons);
 };
 
-var updateTask = function() {
-  console.log('things');
-  return;
-}
 
 document.getElementById('add-btn').addEventListener('click', createNewLi);
 
