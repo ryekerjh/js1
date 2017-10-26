@@ -88,6 +88,113 @@
         </div>
         <div class="row section">
             <aside class="col-sm-3">
+                <h2>Closure</h2>
+            </aside>
+            <main class="col-sm-9">
+                <ul class="points">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Closure</a> is one of the more complicated peices of JavaScript, but it is also very useful to understand.</li>
+                    <li>Closure, as simply put as possible, is the access to a certain scope block, outside of that scope block.</li>
+                    <li>For brevity, I will demonstrate in code:
+                        <pre>
+                            <code>
+    function showMeClosure() {
+        var bestNumber = 42;
+    
+        function proveClosureExists() {
+            console.log( bestNumber );
+        };
+    
+        return proveClosureExists;
+    };
+    
+    var outsideScope = showMeClosure();
+    
+    outsideScope(); // 42 -- Whoa, closure was just observed, man.
+                            </code>
+                        </pre>                        
+                    </li>
+                    <li>That was a lot to digest, but let me break it into its component pieces:
+                        <ol>
+                            <li>
+                                <pre><code>
+    function showMeClosure() { //Here we see a function, declared in the global space.
+        var bestNumber = 42; //This var is scoped lexically to the inside of this fn.
+    
+        function proveClosureExists() {//This function is also lexically scoped inside showMeClosure();
+            console.log( bestNumber ); //Best number is still 42 here, because bestNumber and proveClosureExists() share the scope of showMeClosure();
+        };
+    
+        return proveClosureExists; //This will return the value that proveClosureExists() returns (namely, the value of bestNumber.)
+    };    
+                                </code></pre>
+                            </li>
+                            <li>
+                                <pre>        
+                                    <code>
+    // In the global scope (outside of the showMeClosure() scope), we assign the value that 
+    // showMeClosure(); returns to us to a global var. This is where we observe the closure because
+    // even though this is in the global scope, JS allows the reference to that lexical scope (i.e.
+    // the inner scope of showMeClosure();) to be passed, in this var ONLY, to a global location.
+    var outsideScope = showMeClosure();                                            
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <pre><code>
+    //Finally, we see the result of closure. We call the var outsideScope 
+    // as a function (this is possible because it is a pointer/reference to a function)
+    // and we see that even though the calling context is the global scope, closure
+    // has allowed the definition of bestNumber to be passed outside of lexical scope, to the global scope.
+    // NEAT!
+    outsideScope(); // 42 -- Whoa, closure was just observed, man.                                        
+                                </code></pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>In it's most basic and understandable form, that is closure. There is more to closure, and I highly recommend reading the chapter from You Don't Know JS about <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md">Scope and Closures</a>.</li>
+                </ul>
+            </main>
+        </div>
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>ES6 Classes</h2>
+            </aside>
+            <main class="col-sm-9">
+                <p>For some reason, JavaScript decided that it needed <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> to fit in with other, older languages. So I'll have to teach it to you, I suppose...</p>                
+                <ul>
+                    <li>The good news is, classes aren't brittle and potentially devestating to your code as they are in other languages. In short they are:</li>
+                    <ol>
+                        <li>Special Functions that are NOT hoisted</li>
+                        <li>Contains a special method named "constructor" that is used to define and initialize the class.</li>
+                        <li>Can be "extended" to be declared as a child of another class, but not as a child of another Object.</li>
+                        <li>Inferior to prototypes...in my humble opinion!</li>
+                    </ol>
+                </ul>
+            </main>
+        </div> 
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>What to expect from frameworks</h2>
+            </aside>
+            <main class="col-sm-9">
+                <p>Now that you know JS in all it's introductory glory, you can write anything from a simple, modern website, to entire web applications. You will find that there are many frameworks that make the development of applications much easier for you.</p>                
+                <ul>
+                    <li>In general, expect frameworks to:</li>
+                    <ol>
+                        <li>Have their own syntactic "sugar" that may make them seem like thier own separate language.</li>
+                        <li>Obscure the actual "native" JavaScript they are using behind thier own code.</li>
+                        <li>(In some cases) Cut down on your development time significantly.</li>
+                        <li>Be a major boon when it comes to job searches/hiring.</li>
+                    </ol>
+                </ul>
+                <p>Some stats for you, after all this time!</p>
+                <p><a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm">Bureau of Labor Statistics</a></p>
+                <p><a href="https://medium.com/javascript-scene/forget-the-click-bait-here-s-what-the-javascript-job-market-really-looks-like-in-2016-ddfe0d39b467">Eric Elliot</a>'s hard-hitting look at the JS job market.</p>
+                <p><a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#tab-6">Job Outlook</a> for web devs.</p>
+            </main>
+        </div> 
+        <div class="row section">
+            <aside class="col-sm-3">
                 <h2>Take Home</h2>
             </aside>
             <main class="col-sm-9">
