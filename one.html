@@ -29,7 +29,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Days <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="presentation"><a href="one.html">dayOne</a></li>
-                            <li role="presentation"><a href="two.html">dayTwo</a></li>
+                            <!-- <li role="presentation"><a href="two.html">dayTwo</a></li>
                             <li role="presentation"><a href="three.html">dayThree</a></li>
                             <li role="presentation"><a href="four.html">dayFour</a></li>
                             <li role="presentation"><a href="five.html">dayFive</a></li>
@@ -38,7 +38,7 @@
                             <li role="presentation"><a href="eight.html">dayEight</a></li>
                             <li role="presentation"><a href="nine.html">dayNine</a></li>
                             <li role="presentation"><a href="ten.html">dayTen</a></li>
-                           <!--  <li role="presentation"><a href="eleven.html">dayEleven</a></li>-->
+                            <li role="presentation"><a href="eleven.html">dayEleven</a></li> -->
                             <li role="presentation"><a href="final.html">finalProject</a></li> 
                         </ul>
                     </li>
@@ -98,6 +98,23 @@
         </div>
         <div class="row section">
             <aside class="col-sm-3">
+                <h2>Let's Try It!</h2>
+            </aside>
+            <main class="col-sm-9">
+                <p>Create a project in your <em>projects</em> folder and set up the basics:</p>
+                <ul>
+                    <li>index.html file in your root directory</li>
+                    <li>css and js folders</li>
+                    <li>css/styles.css</li>
+                    <li>js/scripts.js</li>
+                    <li>All should be linked appropriately</li>
+                </ul>
+                <p>Create a repository on GitHub for this folder, link the two, and add me as a collaborator. I will go over this once in class for those of you who don't know Git workflow yet.</p>
+                <p>From now on, you should use branches from this repository for your in-class work. So day 1 will have its own branch, day two will have a separate branch and so on. It's your responsibility to keep these branches separate and to add, commit, and push daily.</p>
+            </main>
+        </div>
+        <div class="row section">
+            <aside class="col-sm-3">
                 <h2>JavaScript</h2>
             </aside>
             <main class="col-sm-9">
@@ -106,6 +123,7 @@
                     <li>Developed by Brendan Eich (Netscape fame) in 10 days (1995)</li>
                     <li>An answer to the server-side rendering of websites that was the only way of making dynamic websites at the time</li>
                     <li>Loosely typed</li>
+                    <li>DOM manipulator</li>
                     <li>Object Oriented Scripting Language (not markup)</li>
                     <li>Essential for modern, dynamic websites</li>
                 </ul>
@@ -127,35 +145,53 @@
                             </pre>
                         </ol>
                     </li>
-                    <li>Conventions
-                        <ul class="dashed-list">
-                            <li>camelCasing for variable names</li>
-                            <ul>
-                                <li><em>Not</em> LikeThis</li>
-                                <li><em>Not</em> likethis</li>
-                                <li><em>Not</em> like-This</li>
-                            </ul>
-                            <li>Variable names should make sense (think of classes and ids in CSS.)</li>
-                            <li>Comments are written like so:</li>
-                            <pre>
-                                <code>//I am a comment. I am unseen...</code>
-                            </pre>
-                            <pre>
-                                <code>/* I am a multi-line comment. I am unseen...
-                                    on multiple lines!!!
-                                    */</code>
-                            </pre>
-                            <li>Scoped indenting (we'll get there, just remember this is important)</li>
-                            <pre>
-                                <code>var myFunction = function(argument) {
-                    console.log(this);
-                }
-                                </code>
-                            </pre>
-                            <li>JS statements are terminated with a semicolon</li>
-                            <pre><code>console.log("things aint cool)<span class="highlight-circle">;</span></code></pre>
-                        </ul>
-                    </li>
+                </ul>
+            </main>
+        </div>
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>The console: our all-in-one environment</h2>
+            </aside>
+            <main class="col-sm-9">
+                <p>The console can be found in your inspector (right-click --> Inspect Element --> click on console. It is useful for:</p>
+                <ul class="points">
+                    <li>Debugging JS code</li>
+                    <li>Playing with JS</li>
+                    <li>Manipulating elements on the website you're on</li>
+                </ul>
+            </main>
+        </div>
+        <div class="row section">
+            <aside class="col-sm-3">
+                <h2>Conventions</h2>
+            </aside>
+            <main class="col-sm-9">
+                <ul class="dashed-list">
+                    <li>camelCasing for variable names</li>
+                    <ul>
+                        <li><em>Not</em> LikeThis</li>
+                        <li><em>Not</em> likethis</li>
+                        <li><em>Not</em> like-This</li>
+                    </ul>
+                    <li>Variable names should make sense (think of classes and ids in CSS.)</li>
+                    <li>Comments are written like so:</li>
+                    <pre>
+                        <code>//I am a comment. I am unseen...</code>
+                    </pre>
+                    <pre>
+                        <code>/* I am a multi-line comment. I am unseen...
+                            on multiple lines!!!
+                            */</code>
+                    </pre>
+                    <li>Scoped indenting (we'll get there, just remember this is important)</li>
+                    <pre>
+                        <code>var myFunction = function(argument) {
+            console.log(this);
+        }
+                        </code>
+                    </pre>
+                    <li>JS statements are terminated with a semicolon</li>
+                    <pre><code>console.log("things aint cool)<span class="highlight-circle">;</span></code></pre>
                 </ul>
             </main>
         </div>
@@ -170,19 +206,6 @@
                     <li>ES6(mostly supported, looking at you IE)/ES2015</li>
                     <li>ECMAScript(standardized, fully accepted version of JS)</li>
                     <li>ES7(proposed/experimental. Think Bootstrap v4)</li>
-                </ul>
-            </main>
-        </div>
-        <div class="row section">
-            <aside class="col-sm-3">
-                <h2>The console: our all-in-one environment</h2>
-            </aside>
-            <main class="col-sm-9">
-                <p>The console can be found in your inspector (right-click --> Inspect Element --> click on console. It is useful for:</p>
-                <ul class="points">
-                    <li>Debugging JS code</li>
-                    <li>Playing with JS</li>
-                    <li>Manipulating elements on the website you're on</li>
                 </ul>
             </main>
         </div>
