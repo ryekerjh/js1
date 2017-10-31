@@ -106,8 +106,8 @@ header {
 .logo {
     background-color: #e40007;
     border-radius: 50%;
-    height: 85px;
-    width: 85px;
+    height: 105px;
+    width: 105px;
     animation: color-swirl 2s ease-in-out;
 }
 
