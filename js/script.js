@@ -36,4 +36,8 @@ var sticky = {
         console.log(theTruth);
   }
   
+  var bodyTag = document.querySelector('body');
+  if(bodyTag.className == 'show-reminder') {
+    alert('Did you add, commit, and push your code from last class? Did you create a new branch for today?');
+  }
   document.addEventListener("DOMContentLoaded", sticky.init.bind(sticky));
