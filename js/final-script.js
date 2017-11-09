@@ -73,14 +73,6 @@
     });
   };
 
-  // var initializeRemovals = function() {
-  //   cons
-  //   allDeleteButtons = wrapper.getElementsByClassName("delete-btn");    
-  //   for (let i = 0; i < allDeleteButtons.length; i++) {
-  //     allDeleteButtons[i].addEventListener("click", removeTask, false);
-  //   };
-  // };
-
   var initializeEdits = function() {
     console.log("initialize edits was fired");
     allEditButtons = wrapper.getElementsByClassName("edit-btn");    
