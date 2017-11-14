@@ -29,11 +29,11 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Days <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="presentation"><a href="one.html">dayOne</a></li>
-                            <!-- <li role="presentation"><a href="two.html">dayTwo</a></li>
+                            <li role="presentation"><a href="two.html">dayTwo</a></li>
                             <li role="presentation"><a href="three.html">dayThree</a></li>
                             <li role="presentation"><a href="four.html">dayFour</a></li>
                             <li role="presentation"><a href="five.html">dayFive</a></li>
-                            <li role="presentation"><a href="six.html">daySix</a></li>
+                            <!--<li role="presentation"><a href="six.html">daySix</a></li>
                             <li role="presentation"><a href="seven.html">daySeven</a></li>
                             <li role="presentation"><a href="eight.html">dayEight</a></li>
                             <li role="presentation"><a href="nine.html">dayNine</a></li>
@@ -56,7 +56,6 @@
                 <li>How do we even do it?</li>
                 <li>What was your result?</li> 
             </ol>
-            <p>From now on, we will be using our Atom code editor.</p>
         </main>
     </div>
     <div class="row section">
@@ -69,17 +68,17 @@
                 <li>Anonymous vs. named</li>
                 <li>Requirements:
                     <ul>
-                        <li> The function keyword followed by...</li>
+                        <li>The function keyword followed by...</li>
                         <li>The name of the function</li>
                         <li>A list of arguments to the functions enclosed in parentheses and separated by commas</li>
                         <li>The statements that define the functions enclosed in curly brackets</li>
                     </ul>
                 </li>
                 <li>Let's try it together...</li>
-                <li>Now let's play with some basic JavaScript predefined 'methods'</li>
+                <li>Now let's play with some basic JavaScript predefined 'methods' on the String Object</li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">.toUpperCase()</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">.toLowerCase()</a></li>
-                <!-- add substring here TODO: -->
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr">.substr()</a></li>
             </ul>
         </main>
     </div>
@@ -88,38 +87,11 @@
             <h2>Try it out!</h2>
         </aside>
         <main class="col-sm-9">
-            <p>In JSFiddle, write a function that:</p>
+            <p>On your day5 branch, write a function that:</p>
             <ul>
-                <li>Prompts a user for a string</li>
-                <li>Converts that string to uppercase</li>
-                <li>Alerts the user the uppercase string</li>
-                <li>Logs the current date and time to the console.</li>
-            </ul>
-        </main>
-    </div>
-    <div class="row section">
-        <aside class="col-sm-3">
-            <h2>Functions, cont.</h2>
-        </aside>
-        <main class="col-sm-9">
-            <p>Custom Functions</p>
-            <ul>
-                <li>Let's write a function that <em>does</em> something.</li>
-                <li>Take a string
-                <li>Using some of the methods we have already learned:
-                    <ul>
-                        <li>Capitalize all the words in the string</li>
-                        <li>***Check for edge cases***</li>
-                        <li>Alerts the user with the fixed string</li>
-                        <li>What you'll need:
-                            <ul>
-                                <li>string.slice()</li>
-                                <li>string.toUpperCase()</li>
-                                <li>concatenation ('string '+ 'other string')</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                <li>Prompts a user for a sentence</li>
+                <li>Normalizes the string by capitalizing the first letter and casting all other words to lower case.</li>
+                <li>Alerts the user the returned string.</li>
             </ul>
         </main>
     </div>
@@ -156,19 +128,6 @@
             </ol>
         </main>
     </div> 
-    <!-- takehome 
-    ·         
-    ·         
-    ·         .
-    ·         
-    ·         
-    ·         If a non-string argument is passed into the function, return a blank string
-    ·         If a string with less than 2 characters or an odd number of characters is passed into this function, return a blank string. Hint: use modulus (%) operator.
-    ·         Bonus: how can this function be modified to work with odd-length strings, such as converting “abc1efg” to “efg1abc”?
-    ·         Create a function that accepts an array of 4 numbers and returns the average
-    ·         If a non-array is passed into the function, return NaN. Remember arrays are considered objects in JS.
-    ·         If any of the 4 values in the array are not a number, return NaN.
-    takehome -->
 </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
