@@ -74,7 +74,23 @@
                         <li>The statements that define the functions enclosed in curly brackets</li>
                     </ul>
                 </li>
-                <li>Let's try it together...</li>
+                <li>Function declaration vs. function expression:
+                    <pre><code>
+    //FUNCTION EXPRESSION: 
+    var logStuff = function(param) {
+       console.log(`${param} was passed in`);
+    };
+
+    //FUNCTION DELCLARATION
+    function multiply(num, secondNum) {
+        return num * secondNum;
+    };
+    //****IMPORTANT: Function hoisting only works with function declaration and not with function expression.
+
+                    </code></pre>
+                </li>
+                <li>Scoping: variables declared outside can't be seen inside, but inside can access all variables declared in the same scope.</li>
+                <li>Recursive Functions: Function that calls itself, performs a bit like a loop.</li>
                 <li>Now let's play with some basic JavaScript predefined 'methods' on the String Object</li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">.toUpperCase()</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">.toLowerCase()</a></li>
@@ -118,7 +134,7 @@
             <h2>Take Home</h2>
         </aside>
         <main class="col-sm-9">
-            <p>In either a new repository or on a new branch, write a program that uses functions to:</p>
+            <p>On your day5 branch write a program that uses functions to:</p>
             <ol class="points">
                 <li>Take a number and return the square of that number (power of 2).</li>
                 <li>If a non-number argument is passed into the function, alert NaN and prompt for another response</li>
