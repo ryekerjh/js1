@@ -10,9 +10,17 @@
 </head>
 <body>
     <section id="wrapper" class="form-group col-sm-8 col-sm-offset-2">
-        <label for="">New Todo Item</label>
-        <input type="text" class="todo form-control" id="todo-input">
-        <button id="add-btn" class="btn btn-success">Add New Todo</button>
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="todo">New Todo Item</label>
+          <input type="text" class="todo form-control" id="todo-input" name="todo">
+        </div>
+        <div class="col-sm-6">
+          <label for="todo-time">How many hours will this take?</label>
+          <input type="text" class="todo form-control" id="todo-time-input" name="todo-time">
+        </div>
+        <button id="add-btn" class="btn btn-success" onclick="makeTodo()">Add New Todo</button>
+      </div>
     </section>
     <ul id="todo-list" class="col-sm-10 col-sm-offset-1"></ul>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
