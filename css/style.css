@@ -168,6 +168,31 @@ aside h2 {
     animation: fade-in 2s ease-in-out;
 }
 
+.fade-1 {
+  animation: fade-in 2s ease-in-out infinite;
+  opacity: 0;
+}
+.fade-2 {
+  animation: fade-in 2s 4s ease-in-out infinite;
+  opacity: 0;
+}
+.fade-3 {
+  animation: fade-in 2s 8s ease-in-out infinite;
+  opacity: 0;
+}
+.fade-4 {
+  animation: fade-in 2s 10s ease-in-out infinite;
+  opacity: 0;
+}
+.fade-5 {
+  animation: fade-in 2s 12s ease-in-out infinite;
+  opacity: 0;
+}
+.fade-6 {
+  animation: fade-in 2s 14s ease-in-out infinite;
+  opacity: 0;
+}
+
 /* TAKE HOME */
 .take-home ul li a {
     font-weight: bold;

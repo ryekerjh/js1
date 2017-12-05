@@ -65,6 +65,14 @@
                             <li>What you see is the prototype that your newly created string inherited from.</li>
                         </ol>
                     </li>
+                    <li> Anatomy of an object
+  <pre><code>
+  var myObj <span style="color: #e40007" class="fade-1">[optional var declaration]</span> = {
+     <span style="color: #e40007" class="fade-2">[key]</span>firstName: <span style="color: green" class="fade-3">[value]</span>"Ryeker",<span style="color: yellow" class="fade-4">[property, separated from other properties by comma]</span>
+  };<span style="color: #e40007" class="fade-5">[Enclosed by curly brackets]</span>
+  <span style="color: #00ffbb" class="fade-6">[keys are <em>never</em> strings, while values can be any of the data types.]</span>
+  </code></pre>
+                    </li>
                     <li>This is different from most other languages for many reasons.</li>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes</a> are a chain of parent objects that trace all the way back to the native JS Object prototype. Our custom object are said to inherit from their prototype, but what does that mean?</li>
                     <li>Let's try it:
