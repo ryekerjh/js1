@@ -68,6 +68,12 @@ code {
     padding-left: 4px;
 }
 
+.highlight-block {
+    background-color: yellow;
+    color: #e40007;
+    animation: fade-in infinite 3s;
+}
+
 .container, .container-fluid {
     padding-bottom: 160px;
 }
